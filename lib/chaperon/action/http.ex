@@ -125,8 +125,6 @@ defmodule Chaperon.Action.HTTP do
     end
   end
 
-  def url(%{path: path}, _), do: path
-
   def full_url(action = %HTTP{method: method, params: params}, session) do
     url = url(action, session)
     case method do
